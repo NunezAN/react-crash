@@ -1,11 +1,12 @@
 import "./TodoList.css"
 
-function TodoList(){
+function TodoList(){ 
+    const taskOne = "Wash Clothes"
     return(
         <ul>
-            <li>
+            <li className="checkbox__item">
                 <input type="checkbox" id="checkbox1"/>
-                <label htmlFor="checkbox1">Wash Clothes</label>
+                <label htmlFor="checkbox1">{`${taskOne}`}</label>
             </li>
             <li>
                 <input type="checkbox" id="checkbox2"/>
