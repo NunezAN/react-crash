@@ -3,14 +3,8 @@ import Product from "./components/Product.jsx";
 import products from "./components/vshoolProducts.js";
 import "./App.css"
 function App() {
-  const producstComponents = products.map((product)=>{
-      return <Product
-      key={product.id}
-      name={product.name} 
-      price={product.price} 
-      description={product.description}
-      >
-      </Product>
+  const producstComponents = products.map((item)=>{
+      return <Product key={item.id}  product={item}></Product>
   })
   return (
     <div className="container">
