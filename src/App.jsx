@@ -1,22 +1,15 @@
 import TodoItem from "./components/TodoItem.jsx";
-import Product from "./components/Product.jsx";
-import products from "./components/vshoolProducts.js";
 import "./App.css"
+import todosData from "./components/todosData.js";
 function App() {
-  const producstComponents = products.map((item)=>{
-      return <Product key={item.id}  product={item}></Product>
+  const todosComponent = todosData.map((todoitem) =>{
+    return <TodoItem key={todoitem.id} item = {todoitem}></TodoItem>  
   })
+
   return (
     <div className="container">
-        {/* <div className="TodoList--container">
-            <TodoItem></TodoItem>
-            <TodoItem></TodoItem>
-            <TodoItem></TodoItem>
-            <TodoItem></TodoItem>
-        </div> */}
-        <div>
-        {producstComponents}
-
+        <div className="TodoList--container">
+          {todosComponent}  
         </div>
     </div>
   );
