@@ -47,18 +47,14 @@ import React from "react";
 class App extends React.Component {
   constructor(){
     super();
-    this.obj = {
-      name: "Alex",
-      age: 26,
+    this.state = {
+      isLoggedIn: false,
     };
   }
-  
   render() {
-    console.log(this.obj.age);
     return (
       <div>
-        <h1>{this.obj.name}</h1>
-        <h3>{this.obj.age} years old</h3>
+        <h1>You are currently logged({this.state.isLoggedIn ? 'in' : 'out'})</h1>
       </div>
     );
   }
