@@ -48,13 +48,14 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      isLoggedIn: false,
+      isLoggedIn: true,
     };
   }
   render() {
+    let word = this.state.isLoggedIn ? "in" : "out"
     return (
       <div>
-        <h1>You are currently logged({this.state.isLoggedIn ? 'in' : 'out'})</h1>
+        <h1>You are currently logged {word}</h1>
       </div>
     );
   }
