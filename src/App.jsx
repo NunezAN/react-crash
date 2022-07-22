@@ -28,10 +28,17 @@ import React from "react";
 // }
 
 class App extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      answer:"Yes"
+    };
+  }
+
   render() {
     return (
       <div>
-        <Header username="Alex"></Header>
+        <Header username={this.state.answer}></Header>
         <Greeting></Greeting>
       </div>
     );
