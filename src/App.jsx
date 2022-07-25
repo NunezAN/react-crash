@@ -38,26 +38,48 @@ import Conditional from "./components/conditional.jsx";
 
 // }
 
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       isLoading:true
+//     };
+//   }
+
+//   componentDidMount() {
+//     setTimeout(() => {
+//       this.setState({
+//         isLoading: false,
+//       });
+//     }, 1508);
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <Conditional isLoading={this.state.isLoading} />
+//       </div>
+//     );
+//   }
+// }
+
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      isLoading:true
+      unreadMessages: [
+        "Call your mon!",
+        "New spam email available.All links are definitely safe to click.",
+      ],
     };
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        isLoading: false,
-      });
-    }, 1508);
   }
 
   render() {
     return (
-      <div>
-        <Conditional isLoading={this.state.isLoading} />
+      <div>{
+        this.state.unreadMessages.length > 0 &&
+        <h2>You have {this.state.unreadMessages.length} unread messages!</h2>
+        }
       </div>
     );
   }
