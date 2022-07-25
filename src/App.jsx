@@ -2,6 +2,7 @@ import TodoItem from "./components/TodoItem.jsx";
 import "./App.css";
 import todosData from "./components/todosData.js";
 import React from "react";
+import Conditional from "./components/conditional.jsx";
 
 // class App extends React.Component {
 //   constructor() {
@@ -40,29 +41,25 @@ import React from "react";
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      isLoading:true
+    };
   }
 
-  componentDidMount(){
-
-  }
-
-  componentWillReceiveProps(){
-
-  }
-
-  shouldComponentUpdate(nextProps, nextState){
-    //return true if want to update
-    //return false if not
-  }
-
-  componentWillUnmount(){
-    //teardown or cleanup before your component dissappears
-    //remove event listeners
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        isLoading: false,
+      });
+    }, 1508);
   }
 
   render() {
-    return <div>Code goes here</div>;
+    return (
+      <div>
+        <Conditional isLoading={this.state.isLoading} />
+      </div>
+    );
   }
 }
 
