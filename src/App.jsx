@@ -67,22 +67,27 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      unreadMessages: [
-        "Call your mon!",
-        "New spam email available.All links are definitely safe to click.",
-      ],
+      loggedIn: true,
     };
+
+    this.logClick = this.logClick.bind(this);
+  }
+
+  logClick() {
+    this.setState(prevState=>{
+      return {loggedIn: !prevState.loggedIn}
+    });
   }
 
   render() {
     return (
-      <div>{
-        this.state.unreadMessages.length > 0 &&
-        <h2>You have {this.state.unreadMessages.length} unread messages!</h2>
-        }
+      <div>
+        <div>{this.state.loggedIn ? "Logged In" : "Logged Out"}</div>
+        <button onClick={this.logClick}>
+          {this.state.loggedIn ? "Log Out" : "log In"}
+        </button>
       </div>
     );
   }
 }
-
 export default App;
