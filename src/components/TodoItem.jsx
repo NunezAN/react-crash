@@ -2,7 +2,6 @@ import "./TodoItem.css";
 
 function TodoList(props) {
   let classCompleted = props.item.completed ? "completed" : "notCompleted";
-  console.log(`${props.item.id}${classCompleted}`);
   return (
     <div>
         <div className="TodoItem">
