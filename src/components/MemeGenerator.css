@@ -1,0 +1,65 @@
+.meme-form{
+    display: flex;
+    justify-content: center;
+    margin: 16px;
+}
+input{
+    height: 36px;
+    width: 200px;
+    font-size: 16px;
+}
+button{
+    font-size: 24px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 4px;
+    margin: 0px 4px;
+}
+.meme{
+    position: relative;
+}
+.meme img{
+    width: 100%;
+    height: 100%;
+}
+
+.top{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    font-size: 2.5em;
+    font-family: impact;
+    text-transform: uppercase;
+    text-shadow:2px 2px 0 #000,
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  0px 2px 0 #000,
+  2px 0px 0 #000,
+  0px -2px 0 #000,
+  -2px 0px 0 #000,
+  2px 2px 5px #000;
+}
+
+.bottom{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    font-size: 2.5em;
+    outline-color: black;
+    font-family: impact;
+    text-transform: uppercase;
+    text-shadow:2px 2px 0 #000,
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  0px 2px 0 #000,
+  2px 0px 0 #000,
+  0px -2px 0 #000,
+  -2px 0px 0 #000,
+  2px 2px 5px #000;
+}

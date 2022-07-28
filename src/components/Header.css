@@ -1,0 +1,12 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    font-size: 56px;
+    background-color: purple;
+}
+img{
+    height: 80px;
+}

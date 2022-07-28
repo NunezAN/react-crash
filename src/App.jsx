@@ -5,6 +5,8 @@ import React from "react";
 import Conditional from "./components/conditional.jsx";
 import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers.js";
 import Form from "./components/form.jsx";
+import Header from "./components/Header.jsx"
+import MemeGenerator from "./components/MemeGenerator.jsx";
 
 // class App extends React.Component {
 //   constructor() {
@@ -123,12 +125,24 @@ import Form from "./components/form.jsx";
 //     );
 //   }
 // }
+class App extends React.Component {
 
-function App(){
-  return(
-    <Form></Form>
-  )
+  render(){
+    return(
+      <div>
+        <Header></Header>
+        <MemeGenerator></MemeGenerator>
+      </div>
+    )
+  }
 }
+
+//-----------components & container-----------
+// function App(){
+//   return(
+//     <Form></Form>
+//   )
+// }
 
 //------------fetch example
 // class App extends React.Component {
